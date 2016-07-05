@@ -1,0 +1,24 @@
+{
+  "name": "njmcode-folio",
+  "version": "1.0.0",
+  "description": "Simple folio one-pager",
+  "main": "src/js/index.js",
+  "scripts": {
+    "styles": "node-sass --include-path src/scss src/scss/main.scss dist/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njmcode/njmcode-folio.git"
+  },
+  "author": "njmcode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/njmcode/njmcode-folio/issues"
+  },
+  "homepage": "https://github.com/njmcode/njmcode-folio#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
+  }
+}

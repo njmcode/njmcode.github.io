@@ -1,0 +1,29 @@
+body {
+  background-color: #2a0349;
+  color: #b5ace7;
+  font-family: monospace;
+  font-size: 1.2em;
+  line-height: 1.4; }
+
+a {
+  color: #eb67c3; }
+  a:hover {
+    color: #eba6d6; }
+
+h1, h2 {
+  color: #fcfcfc; }
+
+h3, h4 {
+  color: #caa7e6; }
+
+h2 {
+  border-bottom: 3px solid #60199a; }
+
+header {
+  background-color: #60199a; }
+  header strong {
+    color: #fcfcfc; }
+
+footer {
+  text-align: center;
+  color: #60199a; }

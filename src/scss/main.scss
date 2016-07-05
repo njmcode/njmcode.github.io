@@ -1,0 +1,47 @@
+$c-base: #60199a;
+$c-bg: #2a0349;
+$c-text: #b5ace7;
+$c-title: #fcfcfc;
+$c-heading: #caa7e6;
+$c-link: #eb67c3;
+$c-link-hover: #eba6d6;
+
+body {
+	background-color: $c-bg;
+	color: $c-text;
+	font-family: monospace;
+	font-size: 1.2em;
+	line-height: 1.4;
+}
+
+a {
+	color: $c-link;
+
+	&:hover {
+		color: $c-link-hover;
+	}
+}
+
+h1, h2 {
+	color: $c-title;
+}
+
+h3, h4 {
+	color: $c-heading;
+}
+
+h2 {
+	border-bottom: 3px solid $c-base;
+}
+
+header {
+	background-color: $c-base;
+	strong {
+		color: $c-title;
+	}
+}
+
+footer {
+	text-align: center;
+	color: $c-base;
+}
