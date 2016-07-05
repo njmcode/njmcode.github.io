@@ -12,17 +12,15 @@ body {
 	line-height: 1.4;
 }
 
-a[href] {
-	color: $c-bg;
-	background-color: $c-link;
+a {
 	font-weight: bold;
+	color: $c-bg;
 	text-decoration: none;
-	padding: 1px 3px;
 	transition: $c-hover-trans;
+}
 
-	&:hover {
-		background-color: $c-link-hover;
-	}
+small {
+	color: $c-base;
 }
 
 h1, h2 {
@@ -39,8 +37,15 @@ h2 {
 	text-transform: uppercase;
 }
 
+ul {
+	color: $c-base;
+	list-style-type: square;
+	padding-left: 1.5em;
+}
+
 li {
 	margin: 0.7em 0;
+	color: $c-text;
 }
 
 header {
@@ -50,10 +55,58 @@ header {
 	strong {
 		color: $c-title;
 	}
+	a {
+		color: $c-title;
+	}
+}
+
+nav {
+	background-color: $c-medium;
+	margin-bottom: 3em;
+
+	h2 {
+		display: none;
+	}
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+
+		li {
+			flex: 1 1 100%;
+			margin: 0;
+
+			a {
+				display: block;
+				text-align: center;
+				text-transform: uppercase;
+				background-color: transparent;
+				padding: 0.3em;
+
+				&:hover {
+					background-color: $c-nav-hover;
+				}
+			}
+		}
+	}
 }
 
 section {
 	padding-bottom: 1em;
+
+	a[href] {
+		background-color: $c-link;
+		padding: 1px 3px;
+
+		&:hover {
+			background-color: $c-link-hover;
+		}
+	}
+
+	a[name] {
+		display: none;
+	}
 }
 
 footer {
@@ -61,7 +114,7 @@ footer {
 	color: $c-base;
 }
 
-.overview, nav, #main {
+.overview, nav ul, #main {
 	max-width: 800px;
 	min-width: 320px;
 	padding: 0 1em;
@@ -72,5 +125,10 @@ footer {
 	position: fixed;
 	bottom: 1em;
 	right: 1em;
+	a {
+		background-color: $c-base;
+		padding: 1px 3px;
+	}
+
 }
 

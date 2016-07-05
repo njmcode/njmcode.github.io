@@ -8,15 +8,14 @@ body {
   font-size: 1.3em;
   line-height: 1.4; }
 
-a[href] {
-  color: #2a0349;
-  background-color: #eb67c3;
+a {
   font-weight: bold;
+  color: #2a0349;
   text-decoration: none;
-  padding: 1px 3px;
   transition: background-color 0.3s ease; }
-  a[href]:hover {
-    background-color: #eba6d6; }
+
+small {
+  color: #60199a; }
 
 h1, h2 {
   color: #fcfcfc; }
@@ -29,8 +28,14 @@ h2 {
   text-shadow: 3px 3px 0 #60199a;
   text-transform: uppercase; }
 
+ul {
+  color: #60199a;
+  list-style-type: square;
+  padding-left: 1.5em; }
+
 li {
-  margin: 0.7em 0; }
+  margin: 0.7em 0;
+  color: #f0f0fc; }
 
 header {
   text-align: center;
@@ -38,15 +43,46 @@ header {
   background-color: #60199a; }
   header strong {
     color: #fcfcfc; }
+  header a {
+    color: #fcfcfc; }
+
+nav {
+  background-color: #b5ace7;
+  margin-bottom: 3em; }
+  nav h2 {
+    display: none; }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0; }
+    nav ul li {
+      flex: 1 1 100%;
+      margin: 0; }
+      nav ul li a {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: transparent;
+        padding: 0.3em; }
+        nav ul li a:hover {
+          background-color: #f0f0fc; }
 
 section {
   padding-bottom: 1em; }
+  section a[href] {
+    background-color: #eb67c3;
+    padding: 1px 3px; }
+    section a[href]:hover {
+      background-color: #eba6d6; }
+  section a[name] {
+    display: none; }
 
 footer {
   text-align: center;
   color: #60199a; }
 
-.overview, nav, #main {
+.overview, nav ul, #main {
   max-width: 800px;
   min-width: 320px;
   padding: 0 1em;
@@ -56,3 +92,6 @@ footer {
   position: fixed;
   bottom: 1em;
   right: 1em; }
+  #to-top a {
+    background-color: #60199a;
+    padding: 1px 3px; }
