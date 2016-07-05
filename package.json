@@ -5,6 +5,7 @@
   "main": "src/js/index.js",
   "scripts": {
     "styles": "node-sass --include-path src/scss src/scss/main.scss dist/css/main.css",
+    "watch": "node-sass -w src/scss -o dist/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
