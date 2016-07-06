@@ -1,5 +1,14 @@
 @import '_consts.scss';
 
+@mixin pixel-font {
+	font-family: '4Mini', monospace;
+}
+
+@mixin pixel-font-caps {
+	@include pixel-font;
+	text-transform: uppercase;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -24,17 +33,23 @@ small {
 }
 
 h1, h2 {
+	@include pixel-font;
 	color: $c-title;
 }
 
-h3, h4 {
+h1 .sitename {
+	text-shadow: 5px 5px 0 $c-bg;
+}
+
+h3 {
+	@include pixel-font-caps;
 	color: $c-heading;
 }
 
 h2 {
+	@include pixel-font-caps;
 	border-bottom: 3px solid $c-base;
 	text-shadow: 3px 3px 0 $c-base;
-	text-transform: uppercase;
 }
 
 ul {
@@ -78,10 +93,11 @@ nav {
 			margin: 0;
 
 			a {
+				@include pixel-font-caps;
 				display: block;
 				text-align: center;
-				text-transform: uppercase;
 				background-color: transparent;
+				text-shadow: 2px 2px 0 $c-text;
 				padding: 0.3em;
 
 				&:hover {

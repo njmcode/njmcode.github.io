@@ -4,8 +4,8 @@
   "description": "Simple folio one-pager",
   "main": "src/js/index.js",
   "scripts": {
-    "styles": "node-sass --include-path src/scss src/scss/main.scss dist/css/main.css",
-    "watch": "node-sass -w src/scss -o dist/css",
+    "styles": "node-sass src/scss --output=dist/css/ --output-style=compressed",
+    "watch": "npm run styles && node-sass src/scss --watch --output=dist/css/ --output-style=compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

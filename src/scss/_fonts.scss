@@ -1,0 +1,11 @@
+$font-path:'../../assets/fonts/';
+
+@font-face {
+    font-family: '4Mini';
+    src:url('#{$font-path}4Mini.ttf.woff') format('woff'),
+        url('#{$font-path}4Mini.ttf.svg#4Mini') format('svg'),
+        url('#{$font-path}4Mini.ttf.eot'),
+        url('#{$font-path}4Mini.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
