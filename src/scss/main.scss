@@ -9,11 +9,17 @@
 	text-transform: uppercase;
 }
 
+@mixin scanlines {
+	background-image: url(#{$pat-bg});
+	background-repeat: repeat;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
+	@include scanlines;
 	background-color: $c-bg;
 	color: $c-text;
 	font-family: monospace;
@@ -41,6 +47,10 @@ h1 .sitename {
 	text-shadow: 5px 5px 0 $c-bg;
 }
 
+h1 span.dec {
+	animation: ramp1 0.5s steps(1, end) alternate infinite;
+}
+
 h3 {
 	@include pixel-font-caps;
 	color: $c-heading;
@@ -64,6 +74,7 @@ li {
 }
 
 header {
+	@include scanlines;
 	text-align: center;
 	padding: 1em;
 	background-color: $c-base;
@@ -147,4 +158,13 @@ footer {
 	}
 
 }
+
+// Ramp 1 anim
+$ramp1: map-get($pal, black),
+        map-get($pal, blue),
+        map-get($pal, violet),
+        map-get($pal, lightblue),
+        map-get($pal, lightgreen),
+        map-get($pal, white);
+@include color-anim('ramp1', $ramp1);
 

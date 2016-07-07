@@ -10,3 +10,37 @@ $c-link-hover: #eba6d6;
 $c-nav-hover: $c-text;
 
 $c-hover-trans: background-color 0.3s ease;
+
+$pat-bg: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAYAAAC56t6BAAAAFUlEQVQIW2NkYGAwZmBgYGAEESgMAATmADd6TbMTAAAAAElFTkSuQmCC";
+
+// Commodore 64 palette
+$pal: (
+    black: #000000,
+    white: #ffffff,
+    red: #882000,
+    cyan: #68d0a8,
+    violet: #a838a0, 
+    green: #50b818, 
+    blue: #181090,
+    yellow: #f0e858, 
+    orange: #a04800, 
+    brown: #472b1b,
+    lightred: #c87870, 
+    grey1: #484848,
+    grey2: #808080, 
+    lightgreen: #98ff98,
+    lightblue: #5090d0,
+    grey3: #b8b8b8
+);
+
+// Mixin to output keyframes for a list of colors
+@mixin color-anim($anim-name, $color-list) {
+    @keyframes #{$anim-name} {
+        @each $col in $color-list {
+            $i: index($color-list, $col) - 1;
+            #{$i / length($color-list) * 100}% {
+                color: $col;
+            }
+        }
+    }
+}
