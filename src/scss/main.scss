@@ -18,6 +18,10 @@
 	box-sizing: border-box;
 }
 
+::selection { 
+	background-color: map-get($pal, lightgreen); 
+}
+
 body {
 	@include scanlines;
 	background-color: $c-bg;
