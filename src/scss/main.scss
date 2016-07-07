@@ -1,19 +1,5 @@
 @import '_consts.scss';
 
-@mixin pixel-font {
-	font-family: '4Mini', monospace;
-}
-
-@mixin pixel-font-caps {
-	@include pixel-font;
-	text-transform: uppercase;
-}
-
-@mixin scanlines {
-	background-image: url(#{$pat-bg});
-	background-repeat: repeat;
-}
-
 * {
 	box-sizing: border-box;
 }
