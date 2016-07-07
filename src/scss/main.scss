@@ -22,6 +22,16 @@ a {
 	color: $c-bg;
 	text-decoration: none;
 	transition: $c-hover-trans;
+
+	&.img-link {
+		display: block;
+		text-align: center;
+		padding: 0.2em!important;
+		background: transparent!important;
+		img {
+			border: 3px solid $c-base;
+		}
+	}
 }
 
 small {
