@@ -1,0 +1,26 @@
+@media only screen and (min-width: 570px) {
+
+	// Split the contact list into 2 cols
+	#contact ul {
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			flex: 1 0 50%;
+		}
+	}
+
+	
+}
+
+@media only screen and (min-width: 760px) {
+	
+	// Float work screenshots to the right
+	
+	#work {
+		.img-link {
+			float: right;
+    		margin: 0 0 1em 1em;
+		}
+	}
+}
