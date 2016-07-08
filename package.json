@@ -5,8 +5,9 @@
   "main": "src/js/index.js",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -b 'last 2 versions' -r dist/css/*",
+    "imagemin": "imagemin --plugin=pngquant assets/img/* --out-dir=dist/assets/img/",
     "styles": "node-sass src/scss --output=dist/css/ --output-style=compressed && npm run autoprefixer",
-    "build": "npm run styles",
+    "build": "npm run styles && npm run imagemin",
     "watch": "nodemon -e scss --watch src/scss -x \"npm run styles\""
   },
   "repository": {
@@ -21,6 +22,8 @@
   "homepage": "https://github.com/njmcode/njmcode-folio#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-pngquant": "^5.0.0",
     "node-sass": "^3.8.0",
     "nodemon": "^1.9.2",
     "postcss-cli": "^2.5.2"
