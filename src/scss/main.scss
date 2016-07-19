@@ -26,6 +26,7 @@ a {
 		display: block;
 		text-align: center;
 		padding: 0.2em!important;
+		margin: 2em auto;
 		background: transparent!important;
 		img {
 			border: 3px solid $c-base;
@@ -38,12 +39,17 @@ small {
 }
 
 p, ul li {
-	line-height: 1.4;
+	line-height: 1.47;
+    margin-top: -0.1em;
+    margin-bottom: 1.05em;
 }
 
 h1, h2 {
 	@include pixel-font;
 	color: $c-title;
+	font-size: 2.05em;
+    margin: 0.755em 0;
+    line-height: 1;
 }
 
 h1 .sitename {
@@ -146,6 +152,10 @@ section {
 			margin-bottom: 0.6em;
 		}
 	}
+}
+
+#work ul, #skills ul {
+	margin-bottom: 4em;
 }
 
 footer {
