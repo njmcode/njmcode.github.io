@@ -26,7 +26,7 @@ a {
 		display: block;
 		text-align: center;
 		padding: 0.2em!important;
-		margin: 2em auto;
+		margin: 1.58em auto;
 		background: transparent!important;
 		img {
 			border: 3px solid $c-base;
@@ -40,8 +40,8 @@ small {
 
 p, ul li {
 	line-height: 1.47;
-    margin-top: -0.1em;
-    margin-bottom: 1.05em;
+    margin-top: -0.10161em;
+    margin-bottom: 1.075em;
 }
 
 h1, h2 {
@@ -63,24 +63,27 @@ h1 span.dec {
 h3 {
 	@include pixel-font-caps;
 	color: $c-heading;
-	margin-bottom:0.1em;
+	margin-bottom: 0.99em;
+    margin-top: -0.266em;
+    line-height: 1.4;
 }
 
 h2 {
 	@include pixel-font-caps;
 	border-bottom: 3px solid $c-base;
 	text-shadow: 3px 3px 0 $c-base;
+	padding-bottom: 0.17em;
+    margin-top: -0.1em;
 }
 
 ul {
 	color: $c-base;
 	list-style-type: square;
 	padding-left: 1.5em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 li {
-	margin: 0.7em 0;
 	color: $c-text;
 }
 
@@ -99,7 +102,7 @@ header {
 
 nav {
 	background-color: $c-medium;
-	margin-bottom: 3em;
+	margin-bottom: 2.93em;
 
 	h2 {
 		display: none;
@@ -132,7 +135,7 @@ nav {
 }
 
 section {
-	padding-bottom: 1em;
+	padding-bottom: 2.05em;
 
 	a[href] {
 		background-color: $c-link;
@@ -146,12 +149,6 @@ section {
 	a[name] {
 		display: none;
 	}
-
-	&#work {
-		h3 {
-			margin-bottom: 0.6em;
-		}
-	}
 }
 
 #work ul, #skills ul {
@@ -161,6 +158,7 @@ section {
 footer {
 	text-align: center;
 	color: $c-base;
+	margin-top: 0.36em;
 }
 
 .overview, nav ul, #main {
