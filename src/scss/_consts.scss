@@ -47,7 +47,8 @@ $pal: (
 }
 
 @mixin pixel-font {
-	font-family: '4Mini', monospace;
+    font-family: '4miniregular', monospace;
+	//font-family: '4Mini', monospace;
 }
 
 @mixin pixel-font-caps {
