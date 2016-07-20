@@ -3,17 +3,9 @@
 // meh
 
 // baseline grid test
-$body-width: 960px;
-$baseline: 1em;
-$columns: 16;
-$column-color: rgba(200,0,0,.2);
+$baseline: 1.2rem;
 $baseline-color: rgba(56,255,255,.8);
 $baseline-color-half: rgba(56,255,255,.5);
-
-// These are all automatically calculated
-$gutter-width: 20px;  // Change if you like
-$gutters: ($columns - 1);
-$column-width: $body-width / $columns;
 
 #baseline-grid {
 	display: none;
@@ -26,10 +18,9 @@ $column-width: $body-width / $columns;
 		width: 100%;
 		height: 900%;
 		
-		background-image: linear-gradient(0deg, $column-color $column-width, transparent $gutter-width),
-								linear-gradient(top, rgba(0,0,0,0) 90%, $baseline-color 100%);
-		background-size: ($column-width + $gutter-width) 100%, 100% ($baseline / 2);
-		background-position: 1em 0px;
+		background-image: linear-gradient(rgba(0,0,0,0) 90%, $baseline-color 100%);
+		background-size: 100% ($baseline / 2);
+		background-position: $baseline 0px;
 	}
 	
 }
