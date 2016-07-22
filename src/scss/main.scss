@@ -137,11 +137,13 @@ section {
 	padding-bottom: 2.05em;
 
 	a[href] {
-		background-color: $c-link;
+		background-color: $c-base-link;
 		padding: 1px 3px;
+		color: $c-link;
 
 		&:hover {
 			background-color: $c-link-hover;
+			color: $c-bg;
 		}
 	}
 
