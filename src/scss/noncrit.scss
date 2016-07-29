@@ -1,26 +1,16 @@
 @import '_fonts.scss';
 
-// meh
-
-// baseline grid test
-$baseline: 1.2rem;
-$baseline-color: rgba(56,255,255,.8);
-$baseline-color-half: rgba(56,255,255,.5);
-
-#baseline-grid {
-	display: none;
-
-	body.grid & {
-		display: block;
-		position: absolute;
+// Make the navigation stick to the top of the screen
+// (set by scroll listener in JS)
+body.sticky {
+	nav {
+		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 900%;
-		
-		background-image: linear-gradient(rgba(0,0,0,0) 90%, $baseline-color 100%);
-		background-size: 100% ($baseline / 2);
-		background-position: $baseline 0px;
+		right: 0;
 	}
-	
+
+	#main {
+		margin-top: 5.1em;
+	}
 }

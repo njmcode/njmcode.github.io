@@ -7,8 +7,9 @@
     "autoprefixer": "postcss -u autoprefixer -b 'last 2 versions' -r dist/css/*",
     "imagemin": "imagemin --plugin=pngquant assets/img/* --out-dir=dist/assets/img/",
     "styles": "node-sass src/scss --output=dist/css/ --output-style=compressed && npm run autoprefixer",
-    "build": "npm run styles && npm run imagemin",
-    "watch": "nodemon -e scss --watch src/scss -x \"npm run styles\""
+    "scripts": "uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
+    "build": "npm run scripts && npm run styles && npm run imagemin",
+    "watch": "nodemon -e scss --watch src/scss -x \"npm run scripts && npm run styles\""
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "imagemin-pngquant": "^5.0.0",
     "node-sass": "^3.8.0",
     "nodemon": "^1.9.2",
-    "postcss-cli": "^2.5.2"
+    "postcss-cli": "^2.5.2",
+    "uglify-js": "^2.7.0"
   }
 }
