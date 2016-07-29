@@ -20,16 +20,22 @@ var StickyNav = (function() {
 			(document.body.clientTop || 0));
 	}
 
-	// Store the Y pos of the nav bar
+	// Store the Y pos of the nav bar relative to the page
 	// (this is the 'trigger line' for sticking/unsticking the nav)
 	function _trackNavAnchorPos() {
+		_trackScrollPos();
 		var navbox = navEl.getBoundingClientRect();
-		navTopY = navbox.top;
+		navTopY = navbox.top + scrollY;
 	}
 
 	// Fired by the resize listener.
 	function _onResize() {
-		_trackNavAnchorPos();
+		document.body.classList.remove(STICKY_CLASS);
+		isSticky = false;
+		setTimeout(function() {
+			_trackNavAnchorPos();
+			_onScroll();
+		}, 1);
 	}
 
 	// Fired by the scroll listener.
@@ -70,7 +76,6 @@ var StickyNav = (function() {
 		// Start
 		isSticky = false;
 		_onResize();
-		_onScroll();
 
 		console.log('StickyNav initialized');
 	}

@@ -173,6 +173,7 @@ footer {
 	position: fixed;
 	bottom: 1em;
 	right: 1em;
+	will-change: opacity;
 	a {
 		background-color: $c-base;
 		padding: 1px 3px;
