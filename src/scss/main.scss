@@ -148,11 +148,13 @@ section {
 	}
 
 	a[name] {
-		display: none;
+		height: 0;
+	    display: block;
+	    transform: translateY(-4em);
 	}
 }
 
-#work ul, #skills ul {
+#s-work ul, #s-skills ul {
 	margin-bottom: 4em;
 }
 

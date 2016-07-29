@@ -1,7 +1,7 @@
 @media only screen and (min-width: 570px) {
 
 	// Split the contact list into 2 cols
-	#contact ul {
+	#s-contact ul {
 		display: flex;
 		flex-wrap: wrap;
 
@@ -17,7 +17,7 @@
 	
 	// Float work screenshots to the right
 	
-	#work {
+	#s-work {
 		.img-link {
 			float: right;
     		margin: 0 0 1em 1em;
