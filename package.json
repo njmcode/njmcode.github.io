@@ -9,7 +9,8 @@
     "styles": "node-sass src/scss --output=dist/css/ --output-style=compressed && npm run autoprefixer",
     "scripts": "uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
     "build": "npm run scripts && npm run styles && npm run imagemin",
-    "watch": "nodemon -e scss --watch src/scss -x \"npm run scripts && npm run styles\""
+    "watch": "nodemon -e scss --watch src/scss -x \"npm run scripts && npm run styles\"",
+    "start": "npm run build && npm run watch"
   },
   "repository": {
     "type": "git",
